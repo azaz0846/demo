@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+      <meta http-equiv="Page-Enter" content="blendTrans(Duration=2.0,Transition=20)">
+   <title>期末專案-1</title>
+   <style>
+      .one {
+         padding: 10px 20px;
+         border: 1px solid #C7C7C7;
+         background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#3308F2));
+         background: -webkit-linear-gradient(top, #FFFFFF, #3308F2);
+         background: -moz-linear-gradient(top, #FFFFFF, #3308F2);
+         background: -ms-linear-gradient(top, #FFFFFF, #3308F2);
+         background: -o-linear-gradient(top, #FFFFFF, #3308F2);
+         background-color: #3308F2;
+         box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 3px #FFFFFF;
+         -webkit-box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 3px #FFFFFF;
+         -moz-box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 3px #FFFFFF;
+         -webkit-border-radius: 12px;
+         -moz-border-radius: 12px;
+         border-radius: 12px;
+         text-shadow: #7A7A7A 1px 1px 0px;
+         color: #FFFFFF;
+         font-size: 25px;
+         font-family: '微軟正黑體';
+         text-decoration: none;
+         font-weight: bold;
+         -webkit-transition: 1.4s;
+         -moz-transition: 1.4s;
+         -o-transition: 1.4s;
+         cursor: pointer;
+      }
+
+      .one:hover {
+         background: none;
+         background-color: #3308F2;
+         box-shadow: 0px 0px 5px 0px #AAAAAA;
+         -webkit-box-shadow: 0px 0px 5px 0px #AAAAAA;
+         -moz-box-shadow: 0px 0px 5px 0px #AAAAAA;
+         border: 1px solid #ffffff;
+         color: #470000;
+      }
+
+      .one:active {
+         top: 1px;
+         position: absolute;
+      }
+
+      .two {
+         padding: 10px 20px;
+         border: 1px solid #C7C7C7;
+         background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#08F213));
+         background: -webkit-linear-gradient(top, #FFFFFF, #08F213);
+         background: -moz-linear-gradient(top, #FFFFFF, #08F213);
+         background: -ms-linear-gradient(top, #FFFFFF, #08F213);
+         background: -o-linear-gradient(top, #FFFFFF, #08F213);
+         background-color: #08F213;
+         box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 3px #FFFFFF;
+         -webkit-box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 3px #FFFFFF;
+         -moz-box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 3px #FFFFFF;
+         -webkit-border-radius: 12px;
+         -moz-border-radius: 12px;
+         border-radius: 12px;
+         text-shadow: #7A7A7A 1px 1px 0px;
+         color: #FFFFFF;
+         font-size: 25px;
+         font-family: '微軟正黑體';
+         text-decoration: none;
+         font-weight: bold;
+         -webkit-transition: 1.4s;
+         -moz-transition: 1.4s;
+         -o-transition: 1.4s;
+         cursor: pointer;
+      }
+
+      .two:hover {
+         background: none;
+         background-color: #08F213;
+         box-shadow: 0px 0px 5px 0px #AAAAAA;
+         -webkit-box-shadow: 0px 0px 5px 0px #AAAAAA;
+         -moz-box-shadow: 0px 0px 5px 0px #AAAAAA;
+         border: 1px solid #ffffff;
+         color: #470000;
+      }
+
+      .two:active {
+         top: 1px;
+         position: absolute;
+      }
+
+      .word {
+         position: absolute;
+         color: black;
+         top: 40px;
+         left: 100px;
+         z-index: 0;
+         font-family: fantasy;
+         font-size: large;
+      }
+
+      .word1 {
+         position: absolute;
+         color: white;
+         top: 40px;
+         left: 100px;
+         z-index: 0;
+         font-family: fantasy;
+         font-size: large;
+      }
+
+      @keyframes hue {
+         from {
+            filter: hue-rotate(0);
+         }
+
+         to {
+            filter: hue-rotate(-360deg);
+         }
+      }
+
+      .word {
+         color: white;
+      }
+
+
+      .D {
+         background: url("wtf-2.jpg");
+         display: block;
+         font-size: 0;
+         height: 280px;
+         width: 400px;
+         z-index: 1;
+         top: 0%;
+         left: 80%;
+         position: absolute;
+      }
+
+      .D:hover {
+         background: url("no.gif");
+
+      }
+
+
+      #player {
+         position: absolute;
+         width: 150px;
+         height: 150px;
+         left: 75px;
+         bottom: 20px;
+      }
+
+
+
+      #enemy {
+         position: absolute;
+         width: 150px;
+         height: 150px;
+         right: 75px;
+         top: 20px;
+      }
+
+
+
+      .table {
+         border-top: none;
+         position: absolute;
+         text-align: center;
+         margin-left: auto;
+         margin-right: auto;
+         background-size: 100% 100%, 47px 53px, 41px 33px, 36px 12px, 20px 36px, 33px 42px, 73px 95px, 93px 75px, 83px 45px, 97px 95px, 53px 65px, 97px 95px, 53px 130px, 57px 67px, 97px 99px, 63px 110px, 107px 150px, 79px 170px, 100% 100%;
+         background-color: rgb(193, 126, 126);
+      }
+
+      .mcard,
+      .card {
+         display: inline-block;
+         width: 200px;
+         height: 200px;
+         border: 1px solid olive;
+         margin: 5px;
+
+      }
+
+      #enemycard {
+         position: absolute;
+         width: 250px;
+         height: 350px;
+         border: 1px solid burlywood;
+         top: 15px;
+         left: 15px;
+         text-align: center;
+      }
+
+      #ourcard {
+         position: absolute;
+         width: 250px;
+         height: 350px;
+         border: 1px solid burlywood;
+         bottom: 15px;
+         right: 15px;
+         text-align: center;
+      }
+
+
+      .mcard img,
+      .card img {
+         transition: all 0.5s ease-out;
+         position: absolute;
+      }
+
+      .mcard img:hover {
+         transform: scale(2);
+         position: absolute;
+         z-index: 1;
+
+      }
+
+
+      .card img:hover {
+
+         position: absolute;
+         z-index: 1;
+         transform: translateY(-120px) scale(2);
+      }
+
+      .poi {
+
+         width: 400px;
+         height: 400px;
+         position: absolute;
+         top: 10%;
+         left: 60%;
+         border: 5px;
+         border-color: green;
+         color: white;
+         border-width: 3px;
+         border-style: solid;
+         padding: 5px;
+      }
+
+      .poi1 {
+
+         width: 400px;
+         height: 300px;
+         position: absolute;
+         top: 10%;
+         left: 60%;
+         border: 5px;
+         border-color: red;
+         border-width: 3px;
+         border-style: solid;
+         padding: 5px;
+         color: blue;
+      }
+   </style>
+
+
+
+   <script>
+
+      function blue() {
+         document.getElementById("main").innerHTML = "<div class='word'><h1>發大財</h1><p>這是多麼重要的事啊</p><p>親愛的鄉親朋友</p><p>民進黨三年來搞得大家民不聊生</p><p>到了大選又抹<span style='color:black;'>黑</span>抹<span style='color:red;'>紅</span>抹<span style='color:yellow;'>黃</span>國瑜</p><p>為了中華民國,不惜粉身碎骨</p></div><div class='poi1'><h1>遊戲說明</h1><p>做為以宇宙為目標的男人,區區一個高雄省長已經滿足不了你了</p><p>你擁有來自國民黨無限的黨產以及紅天的力量</p><p>想辦法讓台灣變成你的塞子吧</p></div>";
+
+         document.getElementById("body").style.backgroundImage = "url(lol.jpg)";
+         document.getElementById("second").innerHTML = "<button type='button' class='one'  id='redgame' onclick='redgame()'  style='position:absolute;top:80%;left:45%;'>一起發大財</button>";
+
+      }
+      function green() {
+         document.getElementById("main").innerHTML = "<div class='poi'><h1>遊戲說明</h1><p>做為一位候選人,你的目標就是運用手邊所有的力量來擊敗對手</p><p>身為台灣數一數二的政黨,你的資源是無限的</p><p>運用計謀來捍衛台灣價值吧!!!</p></div><div class='word1'><h1>台灣價值</h1><p>親愛的鄉親朋友</p><p>你是否受夠了烙跑市長</p><p>你是否不想被統一</p><p>你是否不想失去滷肉飯豬腳飯</p><p>你是否想要人權自由</p><p>如果是的話,將神聖的一票投給辣台妹吧</p></div>";
+
+         document.getElementById("body").style.backgroundImage = "url(2.gif)";
+
+         document.getElementById("second").innerHTML = "<button type='button' class='two' id='greengame' onclick='greengame()' style='position:absolute;top:80%;left:45%;'>台灣價值</button>";
+      }
+
+
+
+      function greengame() {
+         window.open("greenplayer.html", "_parent");
+
+      }
+
+      function redgame() {
+         window.open("redplayer.html", "_parent");
+      }
+
+
+
+
+   </script>
+
+
+
+
+
+</head>
+
+<body>
+   <div id="main">
+
+      <body class="body" id="body" background="wtf.jpg" style="background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;">
+   </div>
+
+
+
+   <div id="second"><button type="button" class="one" onclick="blue()"
+         style="position:absolute;top:85% ;left:18%">我要發大財</button><button type="button" onclick="green()" class="two"
+         style="position:absolute;top:85%;left:75%">我不想去集中營</button></div>
+</body>
+
+</html>

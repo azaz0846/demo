@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Health Bar</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="col-md-12">
+    <div class="row">
+      <h2>Simple Health Bar</h2>
+      <p>This was a simple experiment to generate a bar that interacts to a percentage input and whether I could all control the css using the same calculations.</p>
+    </div>
+    <div class="area">
+      <div class="row">
+        <div class="add-damage btn" type="button">Damage</div>
+        <div class="add-heal btn" type="button">Heal</div>
+      </div>
+      <div class="total"></div>
+      <div class="message-box col-md-12">Make your move!</div>
+      <div class="health-box">
+        <div class="health-bar-red"></div>
+        <div class="health-bar-blue"></div>
+        <div class="health-bar"></div>
+        <div class="health-bar-text"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
